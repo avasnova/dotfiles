@@ -10,7 +10,6 @@ export JAVA_HOME=/usr/lib/jvm/default
 export PATH=$PATH:$JAVA_HOME/bin
 
 source $ZSH/oh-my-zsh.sh
-source $DOTFILES/aliases
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$HOME/.pyenv/bin:$PATH"
