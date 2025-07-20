@@ -40,3 +40,5 @@ extract () {
         (*) echo "Unable to extract '$1'." ;;
     esac
 }
+
+export PATH=$PATH:/home/supernova/.spicetify
