@@ -1,13 +1,11 @@
 DOTFILES="${DOTFILES:-$HOME/repositories/dotfiles}"
 [[ -f "$DOTFILES/zsh/.aliases" ]] && source "$DOTFILES/zsh/.aliases"
+[[ -f "$DOTFILES/zsh/.work_variables" ]] && source "$DOTFILES/zsh/.work_variables"
+[[ -f "$DOTFILES/zsh/.zshrc_arch" ]] && source "$DOTFILES/zsh/.zshrc_arch"
+[[ -f "$DOTFILES/zsh/.zshrc_work" ]] && source "$DOTFILES/zsh/.zshrc_work"
 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
-plugins=(git)
-
-export JAVA_HOME=/usr/lib/jvm/default
-export PATH=$PATH:$JAVA_HOME/bin
 
 source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -41,4 +39,3 @@ extract () {
     esac
 }
 
-export PATH=$PATH:/home/supernova/.spicetify
