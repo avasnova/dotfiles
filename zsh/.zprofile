@@ -1,2 +1,1 @@
-[ "$(tty)" = "/dev/tty1" ] && exec hyprland
-export DOTFILES="$HOME/repositories/dotfiles"
+/opt/homebrew/bin/brew services start alpaca

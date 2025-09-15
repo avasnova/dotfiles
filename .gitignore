@@ -3,3 +3,5 @@ zsh/.work*
 zsh/.zshrc_work
 zsh/.zshrc_cringe
 zsh/.zshenv_old
+zsh/.zprofile
+zsh/.zshenv

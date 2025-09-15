@@ -10,10 +10,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
 extract () {
     if [ ! -f "$1" ]
     then
