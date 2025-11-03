@@ -1,45 +1,53 @@
-# Move focus using command + arrow keys
-# Swap window with adjacent windows
 # Swap window with adjacent windows
 alt - left  : yabai -m window --swap west
 alt - right : yabai -m window --swap east
 alt - up    : yabai -m window --swap north
 alt - down  : yabai -m window --swap south
 
-# Move window to adjacent space
-shift + alt - left  : yabai -m window --space prev; yabai -m window --focus
-shift + alt - right : yabai -m window --space next; yabai -m window --focus
-
-
 # Toggle full screen using command + F
-#cmd - f : yabai -m window --toggle zoom-fullscreen
+cmd - f : yabai -m window --toggle zoom-fullscreen
 
 # Shrink window dimensions using command + M
 cmd - m : yabai -m window --resize left:0:-100; yabai -m window --resize top:0:-100
 
-# Focus spaces on display 1 (1–6)
+# Focus stuff
+cmd - j: yabai -m window --focus west
+cmd - l: yabai -m window --focus east
+cmd - i: yabai -m window --focus north
+cmd - k: yabai -m window --focus south
+
+cmd - 0x21 : yabai -m space --focus prev 
+cmd - 0x1E : yabai -m space --focus next 
+
+# switch workspaces
 cmd - 1 : yabai -m space --focus 1
 cmd - 2 : yabai -m space --focus 2
 cmd - 3 : yabai -m space --focus 3
 cmd - 4 : yabai -m space --focus 4
 cmd - 5 : yabai -m space --focus 5
 cmd - 6 : yabai -m space --focus 6
-
-# Focus spaces on display 2 (7–10)
 cmd - 7 : yabai -m space --focus 7
 cmd - 8 : yabai -m space --focus 8
 cmd - 9 : yabai -m space --focus 9
 cmd - 0 : yabai -m space --focus 10
 
-# Move window to spaces on display 1
+# dvigaem okna tuda sjuda
+shift + alt - 0x21: yabai -m window --space prev; yabai -m window --focus
+shift + alt - 0x1E: yabai -m window --space next; yabai -m window --focus
+
+shift + cmd - 0x21 : yabai -m window --space prev; yabai -m space --focus prev
+shift + cmd - 0x1E : yabai -m window --space next; yabai -m space --focus next
+
 shift + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1
 shift + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2
-# potom dopiwu dlja ostalnih
-
-# Move window to spaces on display 2
+shift + cmd - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + cmd - 4 : yabai -m window --space 4; yabai -m space --focus 4
+shift + cmd - 5 : yabai -m window --space 5; yabai -m space --focus 5
+shift + cmd - 6 : yabai -m window --space 6; yabai -m space --focus 6
 shift + cmd - 7 : yabai -m window --space 7; yabai -m space --focus 7
 shift + cmd - 8 : yabai -m window --space 8; yabai -m space --focus 8
-#potom dopiwu …etc
+shift + cmd - 9 : yabai -m window --space 9; yabai -m space --focus 9
+shift + cmd - 1 : yabai -m window --space 10; yabai -m space --focus 10
 
 # Launch Ghostty with cmd + return
 cmd - return : open -a Ghostty

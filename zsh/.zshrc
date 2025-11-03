@@ -4,6 +4,11 @@ DOTFILES="${DOTFILES:-$HOME/repositories/dotfiles}"
 [[ -f "$DOTFILES/zsh/.zshrc_arch" ]] && source "$DOTFILES/zsh/.zshrc_arch"
 [[ -f "$DOTFILES/zsh/.zshrc_work" ]] && source "$DOTFILES/zsh/.zshrc_work"
 
+export JAVA_HOME=/usr/lib/jvm/default
+
+
+export PATH=$PATH:$JAVA_HOME/bin
+
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
