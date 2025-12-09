@@ -1,3 +1,0 @@
-export PATH=$PATH:/home/supernova/.spicetify
-export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
