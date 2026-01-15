@@ -46,7 +46,5 @@ extract () {
     esac
 }
 
+source "$DOTFILES/zsh/.functions" #I dunno, this is tem, something is overriding ls, but not sure which (on both systems different things, lmao)
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/taavaanj/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
