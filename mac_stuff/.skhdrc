@@ -24,8 +24,6 @@ cmd - l: yabai -m window --focus east
 cmd - i: yabai -m window --focus north
 cmd - k: yabai -m window --focus south
 
-cmd - 0x21 : yabai -m space --focus prev 
-cmd - 0x1E : yabai -m space --focus next 
 
 
 #░█░█░█▀█░█▀▄░█░█░█▀▀░█▀█░█▀█░█▀▀░█▀▀░█▀▀
@@ -53,12 +51,16 @@ cmd - pagedown : yabai -m space --focus 13
 cmd - end      : yabai -m space --focus 14
 
 
-# dvigaem okna tuda sjuda
-shift + alt - 0x21: yabai -m window --space prev; yabai -m window --focus
-shift + alt - 0x1E: yabai -m window --space next; yabai -m window --focus
+# problemnie bindi [ ]  
+# focus prev/next space (just navigation)
+cmd - 0x21 : yabai -m space --focus prev
+cmd - 0x1E : yabai -m space --focus next
 
-shift + cmd - 0x21 : yabai -m window --space prev; yabai -m space --focus prev
-shift + cmd - 0x1E : yabai -m window --space next; yabai -m space --focus next
+# move focused window to prev/next space AND follow it AND keep it focused
+shift + cmd - 0x21 : wid=$(yabai -m query --windows --window | jq -r '.id'); yabai -m window "$wid" --space prev; yabai -m space --focus prev; yabai -m window --focus "$wid"
+shift + cmd - 0x1E : wid=$(yabai -m query --windows --window | jq -r '.id'); yabai -m window "$wid" --space next; yabai -m space --focus next; yabai -m window --focus "$wid"
+
+#-------------
 
 shift + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1
 shift + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2
@@ -69,7 +71,7 @@ shift + cmd - 6 : yabai -m window --space 6; yabai -m space --focus 6
 shift + cmd - 7 : yabai -m window --space 7; yabai -m space --focus 7
 shift + cmd - 8 : yabai -m window --space 8; yabai -m space --focus 8
 shift + cmd - 9 : yabai -m window --space 9; yabai -m space --focus 9
-shift + cmd - 1 : yabai -m window --space 10; yabai -m space --focus 10
+shift + cmd - 0 : yabai -m window --space 10; yabai -m space --focus 10
 
 shift + cmd - delete   : yabai -m window --space 11; yabai -m space --focus 11
 shift + cmd - pageup   : yabai -m window --space 12; yabai -m space --focus 12
