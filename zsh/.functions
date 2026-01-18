@@ -4,3 +4,7 @@ ls() {
   (( $# == 0 )) && command lsd -la || command lsd "$@"
 }
 
+bg() {
+  "$@" >/dev/null 2>&1 & disown
+}
+
