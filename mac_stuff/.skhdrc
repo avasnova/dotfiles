@@ -22,7 +22,12 @@ cmd - l: yabai -m window --focus east; sketchybar --trigger window_focus
 cmd - i: yabai -m window --focus north; sketchybar --trigger window_focus
 cmd - k: yabai -m window --focus south; sketchybar --trigger window_focus
 
+# Fix the console key to output tilde (~) regardless of ANSI/ISO hardware
+shift - 0x0A : osascript -e 'tell application "System Events" to keystroke "~"'
+shift - 0x32 : osascript -e 'tell application "System Events" to keystroke "~"'
 
+# Map Shift + 3 to output hash (#) instead of £
+shift - 3 : osascript -e 'tell application "System Events" to keystroke "#"'
 
 #░█░█░█▀█░█▀▄░█░█░█▀▀░█▀█░█▀█░█▀▀░█▀▀░█▀▀
 #░█▄█░█░█░█▀▄░█▀▄░▀▀█░█▀▀░█▀█░█░░░█▀▀░▀▀█

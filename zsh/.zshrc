@@ -10,7 +10,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ENABLE_CORRECTION="true"
 
-plugins=(mvn git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages command-not-found common-aliases brew)
+plugins=(mvn git zsh-autosuggestions zsh-syntax-highlighting colored-man-pages command-not-found common-aliases brew zsh-fzf-history-search)
 
 source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
